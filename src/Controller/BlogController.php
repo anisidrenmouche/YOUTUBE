@@ -29,6 +29,15 @@ class BlogController extends AbstractController
         return $this->render('blog/home.html.twig');
     }
 
+     /**
+     *@Route("/blog/contact", name="blog_contact")
+     */
+    
+    public function contact()
+    {
+        return $this->render('blog/contact.html.twig');
+    }
+
         /**
         * @Route("/blog/{id}", name="blog_show") 
         */
