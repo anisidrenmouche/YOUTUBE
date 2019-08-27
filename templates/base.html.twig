@@ -18,7 +18,7 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
            <div class="container">
          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-             <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accueil</font></font></a>
+             <a class="navbar-brand" href="{{path('home')}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accueil</font></font></a>
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Basculer la navigation">
                  <span class="navbar-toggler-icon"></span>
              </button>
@@ -26,16 +26,16 @@
              <div class="collapse navbar-collapse" id="navbarColor01">
                  <ul class="navbar-nav mr-auto">
                      <li class="nav-item active">
-                         <a class="nav-link" href="/blog"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Articles</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(actuel)</font></font></span></a>
+                         <a class="nav-link" href="{{path('blog')}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Articles</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(actuel)</font></font></span></a>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link" href="/blog/new"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créer un nouvelle article </font></font></a>
+                         <a class="nav-link" href="{{path('blog_create')}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créer un nouvelle article </font></font></a>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link" href="/blog/contact"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact </font></font></a>
+                         <a class="nav-link" href="{{path('blog_contact')}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact </font></font></a>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link" href="/blog/faq"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F.A.Q</font></font></a>
+                         <a class="nav-link" href="{{path('blog_faq')}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F.A.Q</font></font></a>
                      </li>
                  </ul>
                  <form class="form-inline my-2 my-lg-0">
