@@ -64,18 +64,26 @@ class BlogController extends AbstractController
      * @Route("/blog/{id}/edit", name="blog_edit")
      */
 
-    public function create(Request $request, ObjectManager $manager){
+    public function form( Article $article = null, Request $request, ObjectManager $manager){
+        if(!$article){
             $article = new Article();
+        }
+            // $article = new Article();
 
-          $form = $this->createFormBuilder($article)
-          ->add('title')
-          ->add('content')
-          ->add('image')
-          ->getForm();
+          // $form = $this->createFormBuilder($article)
+          // ->add('title')
+          // ->add('content')
+          // ->add('image')
+          // ->getForm();
+
+          $form =$this->createForm(ArticleType::class, $article);
 
           $form->handleRequest($request);
 
           if($form->isSubmitted()&& $form->isValid()){
+              if(!$article->getid()){
+
+              }
               $article->setCreatedAt(new \ DateTime());
 
               $manager->persist($article);
@@ -85,7 +93,8 @@ class BlogController extends AbstractController
             }
           
           return $this->render('blog/create.html.twig',[
-              'formArticle' => $form->createView()
+              'formArticle' => $form->createView(),
+              'editMode' => $article->getId() !== null //est ce que l'article est different de nul
           ]);
 
         
